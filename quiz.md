@@ -1232,3 +1232,549 @@ It’s an integer
 
 
 > It’s a space allocated in memory
+
+//////////////////////////
+
+0x14. C - Bit manipulation
+
+////////////////////////////////////////
+
+Question #0
+0x89 & 0x01 = ?
+
+
+0x89
+
+
+0x88
+
+
+> 0x01
+
+
+0x00
+
+Question #1
+What is 98 in base16?
+
+
+0x96
+
+
+0x98
+
+
+> 0x62
+
+Question #2
+What is 0x89 in base2?
+
+
+0b10001000
+
+
+0b01101001
+
+
+> 0b10001001
+
+
+0b10101001
+
+Question #3
+0x01 << 1 = ?
+
+
+> 0x02
+
+
+0x00
+
+
+0x03
+
+
+0x01
+
+
+0x10
+
+Question #4
+0x44 | 0x22 = ?
+
+
+> 0x66
+
+
+0x44
+
+
+0x22
+
+Question #5
+0x66 & 0x22 = ?
+
+
+0x66
+
+
+0x44
+
+
+> 0x22
+
+Question #6
+0x02 >> 1 = ?
+
+
+0x00
+
+
+> 0x01
+
+
+0x02
+
+Question #7
+0x01 | 0x00 = ?
+
+
+0x02
+
+
+> 0x01
+
+
+0x00
+
+Question #8
+~ 0x98 = ?
+
+
+0x68
+
+
+> 0x67
+
+
+0x66
+
+Question #9
+0x01 & 0x00 = ?
+
+
+0x02
+
+
+0x01
+
+
+> 0x00
+
+Question #10
+0x89 >> 3 = ?
+
+
+0x22
+
+
+0x89
+
+
+> 0x11
+
+
+0x44
+
+
+0x08
+
+Question #11
+What is 98 in base2?
+
+
+0b10011000
+
+
+> 0b01100010
+
+
+0b01010010
+
+Question #12
+0x01 | 0x01 = ?
+
+
+0x02
+
+
+> 0x01
+
+
+0x00
+
+Question #13
+0x13 << 1 = ?
+
+
+0x98
+
+
+0x4C
+
+
+> 0x26
+
+
+0x13
+
+Question #14
+What is 0b001010010 in base10?
+
+
+84
+
+
+83
+
+
+> 82
+
+
+81
+
+Question #15
+What is 0x89 in base10?
+
+
+139
+
+
+> 137
+
+
+135
+
+
+89
+
+Question #16
+What is 0b01101101 in base16?
+
+
+0x6E
+
+
+0x36
+
+
+0x7D
+
+
+> 0x6D
+
+
+0xD6
+
+Question #17
+0x01 & 0x01 = ?
+
+
+0x02
+
+
+> 0x01
+
+
+0x00
+
+Question #18
+0x88 & 0x01 = ?
+
+
+0x89
+
+
+0x88
+
+
+0x01
+
+
+> 0x00
+
+Question #19
+~ 0x12 = ?
+
+
+0x21
+
+
+0xEE
+
+
+0xFD
+
+
+> 0xED
+
+///////////////
+
+0x15. C - File I/O
+
+//////////////////////////
+
+Question #0
+is open a function or a system call? (select all valid answers)
+
+
+it’s a library call
+
+
+> it’s a function
+
+
+> it’s a function provided by the kernel
+
+
+> it’s a system call
+
+
+it’s a kernel routine
+
+Question #1
+Most of the time, on a classic, modern Linux system, what will be the value of the first file descriptor you will get after opening a new file with open (if open succeeds of course):
+
+
+> 3
+
+
+6
+
+
+0
+
+
+2
+
+
+5
+
+
+1
+
+
+4
+
+Question #2
+What is the correct combination of oflags used to open a file with the mode write only, create it if it doesn’t exist and append new content at the end if it already exists?
+
+
+O_RDWR | O_CREAT | O_APPEND
+
+
+> O_WRONLY | O_CREAT | O_APPEND
+
+
+O_WRONLY | O_CREAT | O_EXCL
+
+
+O_WRONLY
+
+Question #3
+What is the oflag used to open a file in mode read + write?
+
+
+> O_RDWR
+
+
+O_RDONLY
+
+
+O_WRONLY
+
+Question #4
+Without context, on Ubuntu 14.04 LTS, write is a … (please select all correct answers):
+
+
+library call
+
+
+> executable
+
+
+game
+
+
+> system call
+
+
+kernel routine
+
+Question #5
+What is the oflag used to open a file with the mode read only?
+
+
+O_RDWR
+
+
+> O_RDONLY
+
+
+O_WRONLY
+
+Question #6
+What happens if you try to write “Best” to the standard input on Ubuntu 14.04 LTS?
+
+
+> The text will be printed on the terminal on the standard output
+
+
+The text will be printed on the terminal but I can’t pipe it
+
+
+Segmentation fault
+
+
+Nothing
+
+Tips:
+Just try it! :)
+
+Question #7
+What is the unistd symbolic constant for the Standard error?
+
+
+> STDERR_FILENO
+
+
+STDOUT_FILENO
+
+
+STDIN_FILENO
+
+Question #8
+What is the return value of the system call open if it fails?
+
+
+98
+
+
+> -1
+
+
+0
+
+Question #9
+What is the unistd symbolic constant for the standard output?
+
+
+STDERR_FILENO
+
+
+> STDOUT_FILENO
+
+
+STDIN_FILENO
+
+Question #10
+why? #AlwaysAskWhy
+
+
+Because this will be the first opened file descriptor and in CS we start counting starting from 0
+
+
+Because this will be the third opened file descriptor for my process
+
+
+Because this will be the second opened file descriptor for my process
+
+
+I don’t care I never ask why, just let me access the tasks!
+
+
+Because this will be the first opened file descriptor and we start counting starting from 1
+
+
+> Because most of the time, I will already have stdin (value 0), stdout (value 1) and stderr (value 2) opened when my program starts executing.
+
+Question #11
+When I am using O_WRONLY | O_CREAT | O_APPEND -> the | are bitwise operators.
+
+
+False
+
+
+> True
+
+Question #12
+What is the unistd symbolic constant for the standard input?
+
+
+STDERR_FILENO
+
+
+STDOUT_FILENO
+
+
+> STDIN_FILENO
+
+Question #13
+What system call would you use to write to a file descriptor? (select all correct answers)
+
+
+> write
+
+
+fprintf
+
+
+printf
+
+Question #14
+Which of these answers are the equivalent of O_RDWR on Ubuntu 14.04 LTS? (select all correct answers):
+
+
+0
+
+
+(O_RDONLY && O_WRONLY)
+
+
+3 | 2
+
+
+(O_RDONLY << 1)
+
+
+3
+
+
+(O_RDONLY & O_WRONLY)
+
+
+(O_RDONLY + O_WRONLY)
+
+
+1
+
+
+O_RDONLY
+
+
+(O_RDONLY | O_WRONLY)
+
+
+> (O_WRONLY << 1)
+
+
+> 2
+
+
+> 3 & 2
+
+
+O_WRONLY
+
+
+> 1 << 1
